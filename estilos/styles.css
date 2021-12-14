@@ -416,8 +416,9 @@ margin: 3px;
 
 .grid-image-5{
     grid-area: grid-image-5;
-    background-image: url(../Recursos/img/Grid5.JPG);
+    background-image: url(../Recursos/img/asdf.JPG);
 }
+/* agrego un comentario para que me deje hacer un push */
 
 .grid-image-6{
     grid-area: grid-image-6;
