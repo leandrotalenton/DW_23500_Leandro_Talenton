@@ -1,0 +1,430 @@
+/* ____________________ estilos generales  ____________________*/
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    /* overflow-x: hidden; */
+    font-family: 'Merriweather', Times;
+}
+li{
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* * {
+    outline: 1px solid #f00 !important;
+} */
+
+
+
+/* ____________________ estilos del header ____________________*/
+.imagendefondo{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../Recursos/img/main_screen.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+    position:sticky;
+    top: -1px;
+    background-color: rgba(30, 36, 36, 1);
+    border-bottom: 2px solid rgb(54, 61, 61);
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(35, 41, 43, 1);
+    filter: blur(0px);
+    box-shadow: none;
+}
+
+.nav__titulo {
+    height: 80px;
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+.nav__titulo-imagen{
+    height: 100%;
+}
+.nav__titulo-texto{
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.nav__indice {
+    height: 80px;
+    width: 350px;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav__indice-lista{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.nav__indice-lista-li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.nav__indice-lista-li a:hover{
+    color: rgb(204, 202, 202);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 12px;
+    transition-duration: 0.25s;
+}
+
+.nav__otros {
+    height: 80px;
+    width: 300px;
+    flex-shrink: 10;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.nav__otros-lista{
+    display: flex;
+    padding-right: 10%;
+}
+.nav__otros-lista a{
+    margin-right: 5px;
+}
+
+.nav__otros-lista li a img:hover{
+	transform: scale(1.1);
+    transition-duration: 0.1s;
+    }
+
+/* ____________________ Estilos del Main (Index) ____________________*/
+
+.main{
+    background-color: rgba(248, 248, 248, 1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.titulo{
+    padding: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.texto{
+    width: 50vw;
+    text-align: justify;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.imagen_main{
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../Recursos/img/imagen_main.png);
+}
+
+/* ____________________ Estilos del Footer ____________________*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(30, 36, 36, 1);
+}
+
+.footer__texto{
+    color:rgb(208, 208, 208);
+    margin: 20px auto 10px auto;
+    font-size: 8px;
+    font-weight: 300;
+}
+
+.footer__indice{
+    margin: 10px;
+}
+
+.footer__indice-lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 20vw;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(30, 36, 36, 1);
+}
+
+.footer__indice-lista-li{
+margin: 3px;
+}
+
+.footer__indice-lista-li a img{
+    height: 35px;
+    }
+
+.footer__indice-lista-li a img:hover{
+	transform: scale(1.1);
+    transition-duration: 0.1s;
+    }
+
+/* ____________________ Estilos del Main (Basics & Videos) ____________________*/
+
+.bo {
+    width: 100%;
+    background-color: rgba(35, 41, 43, 1);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.bo__title{
+    color: white;
+    margin: 5vw 6.5vw 0vw 6.5vw;
+    font-size: 26px;
+    font-weight: 400;
+}
+.bo__list {
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    font-size: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5vh 0vh;
+}
+.bo__list-archers {
+    background-image: url(../Recursos/img/Archer_aoe2DE.png);
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.bo__list-scouts{
+    background-image: url(../Recursos/img/scout.png);
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.bo__list-kt{
+    background-image: url(../Recursos/img/knight.png);
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.subtitle {
+    display: hidden;
+}
+.steps {
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.steps li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps-title{
+    margin: 1vw;
+    font-weight: 800;
+}
+
+.video{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 10px;
+}
+
+/* ____________________ Estilos del Main (Form) ____________________*/
+.bo__form{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.form-input{
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+}
+
+.form-input:focus{
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    background-color: rgb(46, 49, 49);
+    color: white;
+}
+
+.form-input:hover{
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    background-color: rgb(46, 49, 49);
+    color: white;
+}
+
+.form-noninput{
+    padding: 5px;
+    margin: 5px;
+}
+
+.form-noninput:hover{
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(204, 202, 202)
+}
+
+.bo__form-space-subtitulo{
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.bo__form-space-tyc{
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    width: auto;
+    display: flex;
+    flex-direction: line;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bo__form-space-botones{
+    width: auto;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.bo__form-space-botones-boton{
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.bo__form-space-inputtext{
+    height: 20vh;
+    resize: none;
+}
+
+.bo__form-space-inputcheckbox{
+    width: 24px;
+}
+
+
+/* ____________________ Estilos del Main (Form-Grid) ____________________*/
+
+.grid-container {
+    padding: 2vw;
+    display: grid;
+    grid-gap: 0.5vw;
+    grid-template-columns: repeat(5, 1fr) 5fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form"
+    "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form"
+    "grid-image-3 grid-image-3 grid-image-2 grid-image-2 grid-image-2 grid-form"
+    "grid-image-3 grid-image-3 grid-image-4 grid-image-5 grid-image-6 grid-form"
+    ;
+}
+
+.grid-item{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.grid-image-1{
+    grid-area: grid-image-1;
+    background-image: url(../Recursos/img/Grid1.JPG);
+}
+
+.grid-image-2{
+    grid-area: grid-image-2;
+    background-image: url(../Recursos/img/Grid2.JPG);
+}
+
+.grid-image-3{
+    grid-area: grid-image-3;
+    background-image: url(../Recursos/img/Grid3.JPG);
+}
+
+.grid-image-4{
+    grid-area: grid-image-4;
+    background-image: url(../Recursos/img/Grid4.JPG);
+}
+
+.grid-image-5{
+    grid-area: grid-image-5;
+    background-image: url(../Recursos/img/Grid5.JPG);
+}
+
+.grid-image-6{
+    grid-area: grid-image-6;
+    background-image: url(../Recursos/img/Grid6.JPG);
+}
+
+.grid-form{
+    grid-area: grid-form;
+    padding: 2vw;
+}

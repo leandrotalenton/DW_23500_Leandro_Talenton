@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.class{
+    height: 10px;
+    font: 10px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;/*font*/
+    font-style: italic;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rebeccapurple;
+    /*shortcut para que lo qu tengamos seleccionado se ponga como commentario*/
+    position: relative;
+    position: absolute;/*no se recomienda el absoluto, sino tenes q hacer todo absoluto*/
+    position: sticky;
+    position: fixed;
+}
+
+nav ul {
+    display: inline;
+    position: fixed;
+    top: 20px;
+
+    /*flexbox*/
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-wrap: wrap; /*dentro del octenedor, si no entra, lo mueve a la columna de al lado o la fila de abajo*/
+
+    /*flexflow es como usar un flex direction y flex wrap juntos*/
+
+    /**/
+    /*justifi content distribuye hijos*/
+    justify-content: center;
+    justify-content: space-between; /* genera especio entre los elementos, si se les agrego el flex direcction row */
+    justify-content: space-evenly;
+}
