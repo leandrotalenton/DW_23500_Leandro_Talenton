@@ -120,7 +120,7 @@ header{
 /* ____________________ Estilos del Main (Index) ____________________*/
 
 .main{
-    background-color: rgba(248, 248, 248, 1);
+    background-color: rgb(201, 201, 201);
     display: flex;
     flex-direction: column;
     width: 100%;
