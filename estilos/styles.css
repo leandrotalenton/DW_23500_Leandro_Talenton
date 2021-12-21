@@ -14,6 +14,9 @@ li{
 a {
     text-decoration: none;
 }
+ul{
+    padding-left: 0px;
+}
 
 /* * {
     outline: 1px solid #f00 !important;
@@ -40,6 +43,7 @@ header{
     z-index: 1;
 }
 
+/* Nav viejo */
 .nav {
     width: 100%;
     display: flex;
@@ -56,19 +60,22 @@ header{
     display: flex;
     justify-content: left;
     align-items: center;
-
+    flex-direction: row;
 }
+
 .nav__titulo-imagen{
+    height: 80px;
     height: 100%;
 }
 .nav__titulo-texto{
     color: white;
     font-weight: 300;
     font-size: 18px;
+    margin: auto;
 }
 
 .nav__indice {
-    height: 80px;
+    /* height: 80px; interfiere con bootsrap*/
     width: 350px;
     flex-shrink: 1;
     display: flex;
@@ -112,8 +119,13 @@ header{
     margin-right: 5px;
 }
 
-.nav__otros-lista li a img:hover{
+.nav__otros-lista-button img:hover{
 	transform: scale(1.1);
+    transition-duration: 0.1s;
+    }
+
+.nav__otros-lista li a img:hover{
+    transform: scale(1.1);
     transition-duration: 0.1s;
     }
 
@@ -219,12 +231,12 @@ footer{
 
 .footer__indice-lista{
     display: flex;
+    padding: 0;
     flex-direction: row;
     justify-content: space-evenly;
     width: 20vw;
     margin-right: auto;
     margin-left: auto;
-    background-color: rgba(30, 36, 36, 1);
 }
 
 .footer__indice-lista-li{
@@ -263,7 +275,7 @@ margin: 3px;
     justify-content: space-evenly;
     margin: 5vh 0vh;
 }
-.bo__list-archers {
+.bo__list-archers-steps {
     background-image: url(../Recursos/img/Archer_aoe2DE.png);
     width: auto;
     background-repeat: no-repeat;
@@ -275,7 +287,7 @@ margin: 3px;
     overflow: hidden;
     border-radius: 10px;
 }
-.bo__list-scouts{
+.bo__list-scouts-steps{
     background-image: url(../Recursos/img/scout.png);
     width: auto;
     background-repeat: no-repeat;
@@ -287,7 +299,7 @@ margin: 3px;
     overflow: hidden;
     border-radius: 10px;
 }
-.bo__list-kt{
+.bo__list-kt-steps{
     background-image: url(../Recursos/img/knight.png);
     width: auto;
     background-repeat: no-repeat;
@@ -303,12 +315,15 @@ margin: 3px;
     display: hidden;
 }
 .steps {
-    width: 25vw;
+    width: -webkit-fill-available;
     height: 25vw;
+    max-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 7% 0%;
 }
+
 .steps li {
     margin-left: auto;
     margin-right: auto;
@@ -320,8 +335,9 @@ margin: 3px;
 }
 
 .video{
-    width: 25vw;
+    width: -webkit-fill-available;
     height: 25vw;
+    max-height: 300px;
     border-radius: 10px;
 }
 
