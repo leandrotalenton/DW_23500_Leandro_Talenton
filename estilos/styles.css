@@ -125,7 +125,7 @@ header{
     }
 
 .nav__otros-lista li a img:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     transition-duration: 0.1s;
     }
 
@@ -316,7 +316,7 @@ margin: 3px;
 }
 .steps {
     width: -webkit-fill-available;
-    height: 25vw;
+    height: 60vw;
     max-height: 300px;
     display: flex;
     flex-direction: column;
