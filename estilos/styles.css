@@ -73,7 +73,7 @@ header{
 
 /* ____________________ estilos del header (media queries) ____________________*/
 
-@media (min-width: 401px) {
+@media (min-width: 421px) {
     .nav__titulo-texto-large{
         color: white;
         font-weight: 300;
@@ -85,7 +85,7 @@ header{
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .nav__titulo {
         height: 80px;
         width: auto;
