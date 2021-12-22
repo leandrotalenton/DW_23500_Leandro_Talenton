@@ -67,20 +67,47 @@ header{
     height: 80px;
     height: 100%;
 }
-.nav__titulo-texto{
-    color: white;
-    font-weight: 300;
-    font-size: 18px;
-    margin: auto;
+
+@media (min-width: 401px) {
+    .nav__titulo-texto-large{
+        color: white;
+        font-weight: 300;
+        font-size: 18px;
+        margin: auto;
+    }
+    .nav__titulo-texto-small{
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav__titulo {
+        height: 80px;
+        width: auto;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-direction: row;
+    }
+    .nav__titulo-texto-large{
+        display: none;
+    }
+    .nav__titulo-texto-small{
+        color: white;
+        font-weight: 300;
+        font-size: 18px;
+        margin: auto;
+    }
 }
 
 .nav__indice {
     /* height: 80px; interfiere con bootsrap*/
-    width: 350px;
+    /* width: 350px; */
     flex-shrink: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 .nav__indice-lista{
     display: flex;
@@ -147,13 +174,25 @@ header{
 }
 
 .texto{
-    width: 50vw;
-    text-align: justify;
+    /* width: 50vw; */
+    padding: 0% 15%;
+    /* text-align: justify; */
     margin-right: auto;
     margin-left: auto;
     font-size: 18px;
     font-weight: 300;
 }
+
+/* @media (max-width: 400px) {
+    .texto{
+        width: 90vw;
+        text-align: justify;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 18px;
+        font-weight: 300;
+    }
+} */
 
 .imagen_main{
     height: 40vh;
@@ -223,6 +262,8 @@ footer{
     margin: 20px auto 10px auto;
     font-size: 8px;
     font-weight: 300;
+    text-align: center;
+    padding: 0% 15%;
 }
 
 .footer__indice{
@@ -448,6 +489,34 @@ margin: 3px;
     "grid-image-3 grid-image-3 grid-image-2 grid-image-2 grid-image-2 grid-form"
     "grid-image-3 grid-image-3 grid-image-4 grid-image-5 grid-image-6 grid-form"
     ;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        padding: 2vw;
+        display: grid;
+        grid-gap: 0.5vw;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 4fr repeat(4, 1fr);
+        grid-template-areas: 
+        "grid-form      grid-form       grid-form       grid-form       grid-form"
+        "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
+        "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
+        "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2"
+        "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"
+        ;
+    }
+    .bo__form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    .bo__form-space-inputtext{
+        height: 12vh;
+        resize: none;
+    }
 }
 
 .grid-item{
