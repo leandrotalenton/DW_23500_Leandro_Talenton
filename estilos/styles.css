@@ -18,11 +18,13 @@ ul{
     padding-left: 0px;
 }
 
+.text-white {
+    text-shadow: 0px 0px 1px black;
+}
+
 /* * {
     outline: 1px solid #f00 !important;
 } */
-
-
 
 /* ____________________ estilos del header ____________________*/
 .imagendefondo{
@@ -43,16 +45,6 @@ header{
     z-index: 1;
 }
 
-/* Nav viejo */
-.nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(35, 41, 43, 1);
-    filter: blur(0px);
-    box-shadow: none;
-}
-
 .nav__titulo {
     height: 80px;
     width: 300px;
@@ -67,6 +59,15 @@ header{
     height: 80px;
     height: 100%;
 }
+
+.nav__indice {
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ____________________ estilos del header (media queries) ____________________*/
 
 @media (min-width: 401px) {
     .nav__titulo-texto-large{
@@ -101,61 +102,6 @@ header{
     }
 }
 
-.nav__indice {
-    /* height: 80px; interfiere con bootsrap*/
-    /* width: 350px; */
-    flex-shrink: 1;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-}
-.nav__indice-lista{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-}
-.nav__indice-lista-li a{
-    color: white;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 12px;
-}
-
-.nav__indice-lista-li a:hover{
-    color: rgb(204, 202, 202);
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 12px;
-    transition-duration: 0.25s;
-}
-
-.nav__otros {
-    height: 80px;
-    width: 300px;
-    flex-shrink: 10;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-.nav__otros-lista{
-    display: flex;
-    padding-right: 10%;
-}
-.nav__otros-lista a{
-    margin-right: 5px;
-}
-
-.nav__otros-lista-button img:hover{
-	transform: scale(1.1);
-    transition-duration: 0.1s;
-    }
-
-.nav__otros-lista li a img:hover{
-    /* transform: scale(1.1); */
-    transition-duration: 0.1s;
-    }
-
 /* ____________________ Estilos del Main (Index) ____________________*/
 
 .main{
@@ -174,25 +120,12 @@ header{
 }
 
 .texto{
-    /* width: 50vw; */
     padding: 0% 15%;
-    /* text-align: justify; */
     margin-right: auto;
     margin-left: auto;
     font-size: 18px;
     font-weight: 300;
 }
-
-/* @media (max-width: 400px) {
-    .texto{
-        width: 90vw;
-        text-align: justify;
-        margin-right: auto;
-        margin-left: auto;
-        font-size: 18px;
-        font-weight: 300;
-    }
-} */
 
 .imagen_main{
     height: 40vh;
@@ -491,34 +424,6 @@ margin: 3px;
     ;
 }
 
-@media (max-width: 768px) {
-    .grid-container {
-        padding: 2vw;
-        display: grid;
-        grid-gap: 0.5vw;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 4fr repeat(4, 1fr);
-        grid-template-areas: 
-        "grid-form      grid-form       grid-form       grid-form       grid-form"
-        "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
-        "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
-        "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2"
-        "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"
-        ;
-    }
-    .bo__form{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0;
-    }
-    .bo__form-space-inputtext{
-        height: 12vh;
-        resize: none;
-    }
-}
-
 .grid-item{
     background-repeat: no-repeat;
     background-position: center;
@@ -558,4 +463,35 @@ margin: 3px;
 .grid-form{
     grid-area: grid-form;
     padding: 2vw;
+}
+
+/* ____________________ Estilos del Main (Form medi queries) ____________________*/
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        padding: 2vw;
+        display: grid;
+        grid-gap: 0.5vw;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 4fr repeat(4, 1fr);
+        grid-template-areas: 
+        "grid-form      grid-form       grid-form       grid-form       grid-form"
+        "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
+        "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
+        "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2"
+        "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"
+        ;
+    }
+    .bo__form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    .bo__form-space-inputtext{
+        height: 12vh;
+        resize: none;
+    }
 }
