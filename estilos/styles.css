@@ -38,55 +38,42 @@ header {
   background-color: #1e2424;
   border-bottom: 2px solid #363d3d;
   z-index: 1; }
-
-.nav__titulo {
-  height: 80px;
-  width: 300px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  flex-direction: row; }
-
-.nav__titulo-imagen {
-  height: 80px;
-  height: 100%; }
-
-.nav__indice {
-  flex-shrink: 1;
-  display: flex;
-  justify-content: center; }
-
-.nav__otros-lista-button img:hover {
-  transform: scale(1.1);
-  transition-duration: 0.1s; }
-
-/* ____________________ estilos del header (media queries) ____________________*/
-@media (min-width: 421px) {
-  .nav__titulo-texto-large {
-    color: white;
-    font-weight: 300;
-    font-size: 18px;
-    margin: auto; }
-  .nav__titulo-texto-small {
-    display: none; } }
-
-@media (max-width: 420px) {
-  .nav__titulo {
+  header .nav__titulo {
     height: 80px;
-    width: auto;
+    width: 300px;
     flex-shrink: 0;
     display: flex;
     justify-content: left;
     align-items: center;
     flex-direction: row; }
-  .nav__titulo-texto-large {
-    display: none; }
-  .nav__titulo-texto-small {
-    color: white;
-    font-weight: 300;
-    font-size: 18px;
-    margin: auto; } }
+    header .nav__titulo-imagen {
+      height: 80px;
+      height: 100%; }
+    @media (min-width: 421px) {
+      header .nav__titulo-texto-large {
+        color: white;
+        font-weight: 300;
+        font-size: 18px;
+        margin: auto; }
+      header .nav__titulo-texto-small {
+        display: none; } }
+    @media (max-width: 420px) {
+      header .nav__titulo {
+        width: auto; }
+        header .nav__titulo-texto-large {
+          display: none; }
+        header .nav__titulo-texto-small {
+          color: white;
+          font-weight: 300;
+          font-size: 18px;
+          margin: auto; } }
+  header .nav__indice {
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center; }
+  header .nav__otros-lista-button img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.1s; }
 
 /* ____________________ Estilos del Main (Index) ____________________*/
 .main {
@@ -94,27 +81,18 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%; }
-
-.titulo {
-  padding: 40px;
-  margin-right: auto;
-  margin-left: auto;
-  font-weight: 600;
-  font-size: 26px; }
-
-.texto {
-  padding: 0% 15%;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 18px;
-  font-weight: 300; }
-
-.imagen_main {
-  height: 40vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-image: url(../Recursos/img/imagen_main.png); }
+  .main__titulo {
+    padding: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 26px; }
+  .main__texto {
+    padding: 0% 15%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: 300; }
 
 /* ____________________ Estilos del Main (Index)-(animacion) ____________________*/
 .teuton_container {
@@ -127,29 +105,27 @@ header {
   justify-content: center;
   padding-bottom: 20px;
   z-index: 0.1; }
-
-.teuton {
-  width: 150px;
-  height: 150px;
-  background-image: url(../Recursos/img/legs.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transform: translate(0%, 25px) scale(1.1); }
-
-.teuton::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  background-image: url(../Recursos/img/body.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transform: translate(-50px, -77px);
-  animation: standing 1.4s linear infinite; }
+  .teuton_container__teuton {
+    width: 150px;
+    height: 150px;
+    background-image: url(../Recursos/img/legs.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translate(0%, 25px) scale(1.1); }
+    .teuton_container__teuton::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background-image: url(../Recursos/img/body.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transform: translate(-50px, -77px);
+      animation: standing 1.4s linear infinite; }
 
 @keyframes standing {
   000% {
@@ -160,42 +136,36 @@ header {
     transform: translate(-50px, -77px); } }
 
 /* ____________________ Estilos del Footer ____________________*/
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   background-color: #1e2424; }
-
-.footer__texto {
-  color: #d0d0d0;
-  margin: 20px auto 10px auto;
-  font-size: 8px;
-  font-weight: 300;
-  text-align: center;
-  padding: 0% 15%; }
-
-.footer__indice {
-  margin: 10px; }
-
-.footer__indice-lista {
-  display: flex;
-  padding: 0;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 20vw;
-  margin-right: auto;
-  margin-left: auto; }
-
-.footer__indice-lista-li {
-  margin: 3px; }
-
-.footer__indice-lista-li a img {
-  height: 35px; }
-
-.footer__indice-lista-li a img:hover {
-  transform: scale(1.1);
-  transition-duration: 0.1s; }
+  .footer__texto {
+    color: #d0d0d0;
+    margin: 20px auto 10px auto;
+    font-size: 8px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0% 15%; }
+  .footer__indice {
+    margin: 10px; }
+    .footer__indice-lista {
+      display: flex;
+      padding: 0;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 20vw;
+      margin-right: auto;
+      margin-left: auto; }
+      .footer__indice-lista-li {
+        margin: 3px; }
+        .footer__indice-lista-li a img {
+          height: 35px; }
+          .footer__indice-lista-li a img:hover {
+            transform: scale(1.1);
+            transition-duration: 0.1s; }
 
 /* ____________________ Estilos del Main (Basics & Videos) ____________________*/
 .bo {
@@ -203,57 +173,52 @@ footer {
   background-color: #23292b;
   margin-top: 5vh;
   margin-bottom: 5vh; }
-
-.bo__title {
-  color: white;
-  margin: 5vw 6.5vw 0vw 6.5vw;
-  font-size: 26px;
-  font-weight: 400; }
-
-.bo__list {
-  color: white;
-  text-shadow: 0px 0px 5px black;
-  font-size: 2vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 5vh 0vh; }
-
-.bo__list-archers-steps {
-  background-image: url(../Recursos/img/Archer_aoe2DE.png);
-  width: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 10px; }
-
-.bo__list-scouts-steps {
-  background-image: url(../Recursos/img/scout.png);
-  width: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 10px; }
-
-.bo__list-kt-steps {
-  background-image: url(../Recursos/img/knight.png);
-  width: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  overflow: hidden;
-  border-radius: 10px; }
+  .bo__title {
+    color: white;
+    margin: 5vw 6.5vw 0vw 6.5vw;
+    font-size: 26px;
+    font-weight: 400; }
+  .bo__list {
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    font-size: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5vh 0vh; }
+    .bo__list-archers-steps {
+      background-image: url(../Recursos/img/Archer_aoe2DE.png);
+      width: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 10px; }
+    .bo__list-scouts-steps {
+      background-image: url(../Recursos/img/scout.png);
+      width: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 10px; }
+    .bo__list-kt-steps {
+      background-image: url(../Recursos/img/knight.png);
+      width: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      overflow: hidden;
+      border-radius: 10px; }
 
 .subtitle {
   display: hidden; }
@@ -266,14 +231,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   padding: 7% 0%; }
-
-.steps li {
-  margin-left: auto;
-  margin-right: auto; }
-
-.steps-title {
-  margin: 1vw;
-  font-weight: 800; }
+  .steps li {
+    margin-left: auto;
+    margin-right: auto; }
+  .steps-title {
+    margin: 1vw;
+    font-weight: 800; }
 
 .video {
   width: -webkit-fill-available;
@@ -291,6 +254,34 @@ footer {
   margin-right: auto;
   margin-top: 3vh;
   margin-bottom: 3vh; }
+  .bo__form-space-subtitulo {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 400; }
+  .bo__form-space-tyc {
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    width: auto;
+    display: flex;
+    flex-direction: line;
+    justify-content: space-between;
+    align-items: center; }
+  .bo__form-space-botones {
+    width: auto;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between; }
+    .bo__form-space-botones-boton {
+      width: 50%;
+      border-radius: 10px;
+      border: 1px solid white; }
+  .bo__form-space-inputtext {
+    height: 20vh;
+    resize: none; }
+  .bo__form-space-inputcheckbox {
+    width: 24px; }
 
 .form-input {
   padding: 5px;
@@ -299,69 +290,18 @@ footer {
   border-bottom: 1px solid white;
   background: transparent;
   color: white; }
-
-.form-input:focus {
-  outline: none;
-  padding: 5px;
-  margin: 5px;
-  border: none;
-  border-bottom: 1px solid white;
-  background: transparent;
-  background-color: #2e3131;
-  color: white; }
-
-.form-input:hover {
-  outline: none;
-  padding: 5px;
-  margin: 5px;
-  border: none;
-  border-bottom: 1px solid white;
-  background: transparent;
-  background-color: #2e3131;
-  color: white; }
+  .form-input:focus {
+    outline: none;
+    background-color: #2e3131; }
+  .form-input:hover {
+    outline: none;
+    background-color: #2e3131; }
 
 .form-noninput {
   padding: 5px;
   margin: 5px; }
-
-.form-noninput:hover {
-  padding: 5px;
-  margin: 5px;
-  background-color: #cccaca; }
-
-.bo__form-space-subtitulo {
-  color: white;
-  text-decoration: none;
-  font-size: 26px;
-  font-weight: 400; }
-
-.bo__form-space-tyc {
-  padding: 5px;
-  margin: 5px;
-  color: white;
-  width: auto;
-  display: flex;
-  flex-direction: line;
-  justify-content: space-between;
-  align-items: center; }
-
-.bo__form-space-botones {
-  width: auto;
-  margin: 0px;
-  display: flex;
-  justify-content: space-between; }
-
-.bo__form-space-botones-boton {
-  width: 50%;
-  border-radius: 10px;
-  border: 1px solid white; }
-
-.bo__form-space-inputtext {
-  height: 20vh;
-  resize: none; }
-
-.bo__form-space-inputcheckbox {
-  width: 24px; }
+  .form-noninput:hover {
+    background-color: #cccaca; }
 
 /* ____________________ Estilos del Main (Form-Grid) ____________________*/
 .grid-container {
@@ -371,6 +311,23 @@ footer {
   grid-template-columns: repeat(5, 1fr) 5fr;
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas: "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form" "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form" "grid-image-3 grid-image-3 grid-image-2 grid-image-2 grid-image-2 grid-form" "grid-image-3 grid-image-3 grid-image-4 grid-image-5 grid-image-6 grid-form"; }
+  @media (max-width: 768px) {
+    .grid-container {
+      padding: 2vw;
+      display: grid;
+      grid-gap: 0.5vw;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 4fr repeat(4, 1fr);
+      grid-template-areas: "grid-form      grid-form       grid-form       grid-form       grid-form" "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2" "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2" "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2" "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"; } }
+  .grid-container .bo__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0; }
+  .grid-container .bo__form-space-inputtext {
+    height: 12vh;
+    resize: none; }
 
 .grid-item {
   background-repeat: no-repeat;
@@ -404,22 +361,3 @@ footer {
 .grid-form {
   grid-area: grid-form;
   padding: 2vw; }
-
-/* ____________________ Estilos del Main (Form medi queries) ____________________*/
-@media (max-width: 768px) {
-  .grid-container {
-    padding: 2vw;
-    display: grid;
-    grid-gap: 0.5vw;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 4fr repeat(4, 1fr);
-    grid-template-areas: "grid-form      grid-form       grid-form       grid-form       grid-form" "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2" "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2" "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2" "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"; }
-  .bo__form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0; }
-  .bo__form-space-inputtext {
-    height: 12vh;
-    resize: none; } }

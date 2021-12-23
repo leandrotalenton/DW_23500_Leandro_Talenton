@@ -2,14 +2,10 @@
 $primary-color: rgba(35, 41, 43, 1);
 $clear-text-color: white;
 
-
-
-
 /* ____________________ estilos generales  ____________________*/
 * {
     margin: 0;
     padding: 0;
-
 }
 body{
     /* overflow-x: hidden; */
@@ -24,7 +20,6 @@ a {
 ul{
     padding-left: 0px;
 }
-
 .text-white {
     text-shadow: 0px 0px 1px black;
 }
@@ -50,66 +45,52 @@ header{
     background-color: rgba(30, 36, 36, 1);
     border-bottom: 2px solid rgb(54, 61, 61);
     z-index: 1;
-}
-
-.nav__titulo {
-    height: 80px;
-    width: 300px;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-}
-
-.nav__titulo-imagen{
-    height: 80px;
-    height: 100%;
-}
-
-.nav__indice {
-    flex-shrink: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.nav__otros-lista-button img:hover{
-    transform: scale(1.1);
-    transition-duration: 0.1s;
-}
-
-/* ____________________ estilos del header (media queries) ____________________*/
-
-@media (min-width: 421px) {
-    .nav__titulo-texto-large{
-        color: $clear-text-color;
-        font-weight: 300;
-        font-size: 18px;
-        margin: auto;
-    }
-    .nav__titulo-texto-small{
-        display: none;
-    }
-}
-
-@media (max-width: 420px) {
-    .nav__titulo {
-        height: 80px;
-        width: auto;
-        flex-shrink: 0;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        flex-direction: row;
-    }
-    .nav__titulo-texto-large{
-        display: none;
-    }
-    .nav__titulo-texto-small{
-        color: $clear-text-color;
-        font-weight: 300;
-        font-size: 18px;
-        margin: auto;
+    .nav{
+        &__titulo {
+            height: 80px;
+            width: 300px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: row;
+            &-imagen{
+                height: 80px;
+                height: 100%;
+            }
+            @media (min-width: 421px) {
+                &-texto-large{
+                    color: $clear-text-color;
+                    font-weight: 300;
+                    font-size: 18px;
+                    margin: auto;
+                }
+                &-texto-small{
+                    display: none;
+                }
+            }
+            @media (max-width: 420px) {
+                width: auto;
+                &-texto-large{
+                    display: none;
+                }
+                &-texto-small{
+                    color: $clear-text-color;
+                    font-weight: 300;
+                    font-size: 18px;
+                    margin: auto;
+                }
+            }
+        }
+        &__indice {
+            flex-shrink: 1;
+            display: flex;
+            justify-content: center;
+        }
+        &__otros-lista-button img:hover{
+            transform: scale(1.1);
+            transition-duration: 0.1s;
+        }
     }
 }
 
@@ -120,30 +101,20 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-.titulo{
-    padding: 40px;
-    margin-right: auto;
-    margin-left: auto;
-    font-weight: 600;
-    font-size: 26px;
-}
-
-.texto{
-    padding: 0% 15%;
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.imagen_main{
-    height: 40vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url(../Recursos/img/imagen_main.png);
+    &__titulo{
+        padding: 40px;
+        margin-right: auto;
+        margin-left: auto;
+        font-weight: 600;
+        font-size: 26px;
+    }
+    &__texto{
+        padding: 0% 15%;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 18px;
+        font-weight: 300;
+    }
 }
 
 /* ____________________ Estilos del Main (Index)-(animacion) ____________________*/
@@ -158,31 +129,29 @@ header{
     justify-content: center;
     padding-bottom: 20px;
     z-index: 0.1;
-}
-
-.teuton{
-    width: 150px;
-    height: 150px;
-    background-image: url(../Recursos/img/legs.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transform: translate(0%, 25px) scale(1.1);
-}
-
-.teuton::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    background-image: url(../Recursos/img/body.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transform: translate(-50px, -77px);
-    animation: standing 1.4s linear infinite;
+    &__teuton{
+        width: 150px;
+        height: 150px;
+        background-image: url(../Recursos/img/legs.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transform: translate(0%, 25px) scale(1.1);
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-image: url(../Recursos/img/body.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transform: translate(-50px, -77px);
+            animation: standing 1.4s linear infinite;
+        }
+    }
 }
 
 @keyframes standing {
@@ -193,50 +162,43 @@ header{
 
 /* ____________________ Estilos del Footer ____________________*/
 
-footer{
+.footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     background-color: rgba(30, 36, 36, 1);
-}
-
-.footer__texto{
-    color:rgb(208, 208, 208);
-    margin: 20px auto 10px auto;
-    font-size: 8px;
-    font-weight: 300;
-    text-align: center;
-    padding: 0% 15%;
-}
-
-.footer__indice{
-    margin: 10px;
-}
-
-.footer__indice-lista{
-    display: flex;
-    padding: 0;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 20vw;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.footer__indice-lista-li{
-margin: 3px;
-}
-
-.footer__indice-lista-li a img{
-    height: 35px;
+    &__texto{
+        color:rgb(208, 208, 208);
+        margin: 20px auto 10px auto;
+        font-size: 8px;
+        font-weight: 300;
+        text-align: center;
+        padding: 0% 15%;
     }
-
-.footer__indice-lista-li a img:hover{
-	transform: scale(1.1);
-    transition-duration: 0.1s;
+    &__indice{
+        margin: 10px;
+        &-lista{
+            display: flex;
+            padding: 0;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 20vw;
+            margin-right: auto;
+            margin-left: auto;
+            &-li{
+                margin: 3px;
+                a img{
+                    height: 35px;
+                    &:hover{
+                        transform: scale(1.1);
+                        transition-duration: 0.1s;
+                    }
+                }
+            }
+        }
     }
-
+}
 
 
 /* ____________________ Estilos del Main (Basics & Videos) ____________________*/
@@ -246,58 +208,59 @@ margin: 3px;
     background-color: $primary-color;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    &__title{
+        color: $clear-text-color;
+        margin: 5vw 6.5vw 0vw 6.5vw;
+        font-size: 26px;
+        font-weight: 400;
+    }
+    &__list {
+        color: $clear-text-color;
+        text-shadow: 0px 0px 5px black;
+        font-size: 2vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 5vh 0vh;
+        &-archers-steps {
+            background-image: url(../Recursos/img/Archer_aoe2DE.png);
+            width: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        &-scouts-steps{
+            background-image: url(../Recursos/img/scout.png);
+            width: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        &-kt-steps{
+            background-image: url(../Recursos/img/knight.png);
+            width: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+    }
 }
-.bo__title{
-    color: $clear-text-color;
-    margin: 5vw 6.5vw 0vw 6.5vw;
-    font-size: 26px;
-    font-weight: 400;
-}
-.bo__list {
-    color: $clear-text-color;
-    text-shadow: 0px 0px 5px black;
-    font-size: 2vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 5vh 0vh;
-}
-.bo__list-archers-steps {
-    background-image: url(../Recursos/img/Archer_aoe2DE.png);
-    width: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.bo__list-scouts-steps{
-    background-image: url(../Recursos/img/scout.png);
-    width: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.bo__list-kt-steps{
-    background-image: url(../Recursos/img/knight.png);
-    width: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    overflow: hidden;
-    border-radius: 10px;
-}
+
 .subtitle {
     display: hidden;
 }
@@ -309,16 +272,14 @@ margin: 3px;
     flex-direction: column;
     justify-content: center;
     padding: 7% 0%;
-}
-
-.steps li {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.steps-title{
-    margin: 1vw;
-    font-weight: 800;
+    li {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-title{
+        margin: 1vw;
+        font-weight: 800;
+    }
 }
 
 .video{
@@ -338,6 +299,40 @@ margin: 3px;
     margin-right: auto;
     margin-top: 3vh;
     margin-bottom: 3vh;
+    &-space-subtitulo{
+        color: $clear-text-color;
+        text-decoration: none;
+        font-size: 26px;
+        font-weight: 400;
+    }
+    &-space-tyc{
+        padding: 5px;
+        margin: 5px;
+        color: $clear-text-color;
+        width: auto;
+        display: flex;
+        flex-direction: line;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-space-botones{
+        width: auto;
+        margin: 0px;
+        display: flex;
+        justify-content: space-between;
+        &-boton{
+            width: 50%;
+            border-radius: 10px;
+            border: 1px solid white;
+        }
+    }
+    &-space-inputtext{
+        height: 20vh;
+        resize: none;
+    }
+    &-space-inputcheckbox{
+        width: 24px;
+    }
 }
 
 .form-input{
@@ -347,164 +342,98 @@ margin: 3px;
     border-bottom: 1px solid white;
     background: transparent;
     color: $clear-text-color;
-}
-
-.form-input:focus{
-    outline: none;
-    padding: 5px;
-    margin: 5px;
-    border: none;
-    border-bottom: 1px solid white;
-    background: transparent;
-    background-color: rgb(46, 49, 49);
-    color: $clear-text-color;
-}
-
-.form-input:hover{
-    outline: none;
-    padding: 5px;
-    margin: 5px;
-    border: none;
-    border-bottom: 1px solid white;
-    background: transparent;
-    background-color: rgb(46, 49, 49);
-    color: $clear-text-color;
+    &:focus{
+        outline: none;
+        background-color: rgb(46, 49, 49);
+    }
+    &:hover{
+        outline: none;
+        background-color: rgb(46, 49, 49);
+    }
 }
 
 .form-noninput{
     padding: 5px;
     margin: 5px;
+    &:hover{
+        background-color: rgb(204, 202, 202)
+    }
 }
-
-.form-noninput:hover{
-    padding: 5px;
-    margin: 5px;
-    background-color: rgb(204, 202, 202)
-}
-
-.bo__form-space-subtitulo{
-    color: $clear-text-color;
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: 400;
-}
-
-.bo__form-space-tyc{
-    padding: 5px;
-    margin: 5px;
-    color: $clear-text-color;
-    width: auto;
-    display: flex;
-    flex-direction: line;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.bo__form-space-botones{
-    width: auto;
-    margin: 0px;
-    display: flex;
-    justify-content: space-between;
-}
-.bo__form-space-botones-boton{
-    width: 50%;
-    border-radius: 10px;
-    border: 1px solid white;
-}
-.bo__form-space-inputtext{
-    height: 20vh;
-    resize: none;
-}
-
-.bo__form-space-inputcheckbox{
-    width: 24px;
-}
-
 
 /* ____________________ Estilos del Main (Form-Grid) ____________________*/
 
-.grid-container {
-    padding: 2vw;
-    display: grid;
-    grid-gap: 0.5vw;
-    grid-template-columns: repeat(5, 1fr) 5fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form"
-    "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form"
-    "grid-image-3 grid-image-3 grid-image-2 grid-image-2 grid-image-2 grid-form"
-    "grid-image-3 grid-image-3 grid-image-4 grid-image-5 grid-image-6 grid-form"
-    ;
-}
 
-.grid-item{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.grid-image-1{
-    grid-area: grid-image-1;
-    background-image: url(../Recursos/img/Grid1.JPG);
-}
-
-.grid-image-2{
-    grid-area: grid-image-2;
-    background-image: url(../Recursos/img/Grid2.JPG);
-}
-
-.grid-image-3{
-    grid-area: grid-image-3;
-    background-image: url(../Recursos/img/Grid3.JPG);
-}
-
-.grid-image-4{
-    grid-area: grid-image-4;
-    background-image: url(../Recursos/img/Grid4.JPG);
-}
-
-.grid-image-5{
-    grid-area: grid-image-5;
-    background-image: url(../Recursos/img/Grid5.JPG);
-}
-
-.grid-image-6{
-    grid-area: grid-image-6;
-    background-image: url(../Recursos/img/Grid6.JPG);
-}
-
-.grid-form{
-    grid-area: grid-form;
-    padding: 2vw;
-}
-
-/* ____________________ Estilos del Main (Form medi queries) ____________________*/
-
-
-@media (max-width: 768px) {
-    .grid-container {
+.grid{
+    &-container {
+        @media (max-width: 768px) {
+                padding: 2vw;
+                display: grid;
+                grid-gap: 0.5vw;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: 4fr repeat(4, 1fr);
+                grid-template-areas: 
+                "grid-form      grid-form       grid-form       grid-form       grid-form"
+                "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
+                "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
+                "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2"
+                "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"
+                ;
+            }
+        .bo__form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+        }
+        .bo__form-space-inputtext{
+            height: 12vh;
+            resize: none;
+        }
         padding: 2vw;
         display: grid;
         grid-gap: 0.5vw;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 4fr repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr) 5fr;
+        grid-template-rows: repeat(4, 1fr);
         grid-template-areas: 
-        "grid-form      grid-form       grid-form       grid-form       grid-form"
-        "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
-        "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
-        "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2"
-        "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"
+        "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form"
+        "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form"
+        "grid-image-3 grid-image-3 grid-image-2 grid-image-2 grid-image-2 grid-form"
+        "grid-image-3 grid-image-3 grid-image-4 grid-image-5 grid-image-6 grid-form"
         ;
     }
-    .bo__form{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0;
+    &-item{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
-    .bo__form-space-inputtext{
-        height: 12vh;
-        resize: none;
+    &-image-1{
+        grid-area: grid-image-1;
+        background-image: url(../Recursos/img/Grid1.JPG);
+    }
+    &-image-2{
+        grid-area: grid-image-2;
+        background-image: url(../Recursos/img/Grid2.JPG);
+    }
+    &-image-3{
+        grid-area: grid-image-3;
+        background-image: url(../Recursos/img/Grid3.JPG);
+    }
+    &-image-4{
+        grid-area: grid-image-4;
+        background-image: url(../Recursos/img/Grid4.JPG);
+    }
+    &-image-5{
+        grid-area: grid-image-5;
+        background-image: url(../Recursos/img/Grid5.JPG);
+    }
+    &-image-6{
+        grid-area: grid-image-6;
+        background-image: url(../Recursos/img/Grid6.JPG);
+    }
+    &-form{
+        grid-area: grid-form;
+        padding: 2vw;
     }
 }
+
