@@ -366,19 +366,19 @@ header{
 .grid{
     &-container {
         @media (max-width: 768px) {
-                padding: 2vw;
-                display: grid;
-                grid-gap: 0.5vw;
-                grid-template-columns: repeat(5, 1fr);
-                grid-template-rows: 4fr repeat(4, 1fr);
-                grid-template-areas: 
-                "grid-form      grid-form       grid-form       grid-form       grid-form"
-                "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
-                "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
-                "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2"
-                "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"
-                ;
-            }
+            padding: 2vw;
+            display: grid;
+            grid-gap: 0.5vw;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 4fr repeat(4, 1fr);
+            grid-template-areas: 
+            "grid-form      grid-form       grid-form       grid-form       grid-form"
+            "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
+            "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
+            "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2"
+            "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"
+            ;
+        }
         .bo__form{
             width: 100%;
             display: flex;
