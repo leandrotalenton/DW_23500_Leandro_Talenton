@@ -2,6 +2,13 @@
 $primary-color: rgba(35, 41, 43, 1);
 $clear-text-color: white;
 
+$font-sizes: (
+    "pequenio": 8px,
+    "mediano": 18px,
+    "grande": 26px,
+    "ajustable": 2vw
+);
+
 // mixins
 @mixin imagepropertys {
     background-repeat: no-repeat;
@@ -67,7 +74,7 @@ header{
                 &-texto-large{
                     color: $clear-text-color;
                     font-weight: 300;
-                    font-size: 18px;
+                    font-size: map-get($map: $font-sizes, $key: mediano);
                     margin: auto;
                 }
                 &-texto-small{
@@ -82,7 +89,7 @@ header{
                 &-texto-small{
                     color: $clear-text-color;
                     font-weight: 300;
-                    font-size: 18px;
+                    font-size: map-get($map: $font-sizes, $key: mediano);
                     margin: auto;
                 }
             }
@@ -111,13 +118,13 @@ header{
         margin-right: auto;
         margin-left: auto;
         font-weight: 600;
-        font-size: 26px;
+        font-size: map-get($map: $font-sizes, $key: grande);
     }
     &__texto{
         padding: 0% 15%;
         margin-right: auto;
         margin-left: auto;
-        font-size: 18px;
+        font-size: map-get($map: $font-sizes, $key: mediano);
         font-weight: 300;
     }
     &__emblemas{
@@ -202,7 +209,7 @@ $emblems:(
     &__texto{
         color:rgb(208, 208, 208);
         margin: 20px auto 10px auto;
-        font-size: 8px;
+        font-size: map-get($map: $font-sizes, $key: pequenio);
         font-weight: 300;
         text-align: center;
         padding: 0% 15%;
@@ -242,13 +249,13 @@ $emblems:(
     &__title{
         color: $clear-text-color;
         margin: 5vw 6.5vw 0vw 6.5vw;
-        font-size: 26px;
+        font-size: map-get($map: $font-sizes, $key: grande);
         font-weight: 400;
     }
     &__list {
         color: $clear-text-color;
         text-shadow: 0px 0px 5px black;
-        font-size: 2vw;
+        font-size: map-get($map: $font-sizes, $key: ajustable);
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -315,7 +322,7 @@ $emblems:(
     &-space-subtitulo{
         color: $clear-text-color;
         text-decoration: none;
-        font-size: 26px;
+        font-size: map-get($map: $font-sizes, $key: grande);
         font-weight: 400;
     }
     &-space-tyc{
