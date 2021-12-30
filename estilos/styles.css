@@ -186,7 +186,7 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 5vh 0vh; }
-    .bo__list-archers-steps {
+    .bo__list-archers-steps, .bo__list-scouts-steps, .bo__list-kt-steps {
       background-image: url(../Recursos/img/Archer_aoe2DE.png);
       width: auto;
       background-repeat: no-repeat;
@@ -198,27 +198,9 @@ header {
       overflow: hidden;
       border-radius: 10px; }
     .bo__list-scouts-steps {
-      background-image: url(../Recursos/img/scout.png);
-      width: auto;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 10px; }
+      background-image: url(../Recursos/img/scout.png); }
     .bo__list-kt-steps {
-      background-image: url(../Recursos/img/knight.png);
-      width: auto;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      overflow: hidden;
-      border-radius: 10px; }
+      background-image: url(../Recursos/img/knight.png); }
 
 .subtitle {
   display: hidden; }
@@ -329,35 +311,48 @@ header {
     height: 12vh;
     resize: none; }
 
-.grid-item {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+.grid-form {
+  grid-area: grid-form;
+  padding: 2vw; }
 
 .grid-image-1 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: grid-image-1;
   background-image: url(../Recursos/img/Grid1.JPG); }
 
 .grid-image-2 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: grid-image-2;
   background-image: url(../Recursos/img/Grid2.JPG); }
 
 .grid-image-3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: grid-image-3;
   background-image: url(../Recursos/img/Grid3.JPG); }
 
 .grid-image-4 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: grid-image-4;
   background-image: url(../Recursos/img/Grid4.JPG); }
 
 .grid-image-5 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: grid-image-5;
   background-image: url(../Recursos/img/Grid5.JPG); }
 
 .grid-image-6 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: grid-image-6;
   background-image: url(../Recursos/img/Grid6.JPG); }
-
-.grid-form {
-  grid-area: grid-form;
-  padding: 2vw; }

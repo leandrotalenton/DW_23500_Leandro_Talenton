@@ -2,6 +2,13 @@
 $primary-color: rgba(35, 41, 43, 1);
 $clear-text-color: white;
 
+// mixins
+@mixin imagepropertys {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /* ____________________ estilos generales  ____________________*/
 * {
     margin: 0;
@@ -33,9 +40,7 @@ ul{
     width: 100%;
     height: 50vh;
     background-image: url(../Recursos/img/main_screen.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include imagepropertys
 }
 
 header{
@@ -133,9 +138,7 @@ header{
         width: 150px;
         height: 150px;
         background-image: url(../Recursos/img/legs.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        @include imagepropertys;
         transform: translate(0%, 25px) scale(1.1);
         &::before{
             content: "";
@@ -145,9 +148,7 @@ header{
             width: 200px;
             height: 200px;
             background-image: url(../Recursos/img/body.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            @include imagepropertys;
             transform: translate(-50px, -77px);
             animation: standing 1.4s linear infinite;
         }
@@ -225,9 +226,7 @@ header{
         &-archers-steps {
             background-image: url(../Recursos/img/Archer_aoe2DE.png);
             width: auto;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            @include imagepropertys;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -235,28 +234,12 @@ header{
             border-radius: 10px;
         }
         &-scouts-steps{
+            @extend .bo__list-archers-steps;
             background-image: url(../Recursos/img/scout.png);
-            width: auto;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
-            border-radius: 10px;
         }
         &-kt-steps{
+            @extend .bo__list-archers-steps;
             background-image: url(../Recursos/img/knight.png);
-            width: auto;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            overflow: hidden;
-            border-radius: 10px;
         }
     }
 }
@@ -402,38 +385,17 @@ header{
         "grid-image-3 grid-image-3 grid-image-4 grid-image-5 grid-image-6 grid-form"
         ;
     }
-    &-item{
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-    &-image-1{
-        grid-area: grid-image-1;
-        background-image: url(../Recursos/img/Grid1.JPG);
-    }
-    &-image-2{
-        grid-area: grid-image-2;
-        background-image: url(../Recursos/img/Grid2.JPG);
-    }
-    &-image-3{
-        grid-area: grid-image-3;
-        background-image: url(../Recursos/img/Grid3.JPG);
-    }
-    &-image-4{
-        grid-area: grid-image-4;
-        background-image: url(../Recursos/img/Grid4.JPG);
-    }
-    &-image-5{
-        grid-area: grid-image-5;
-        background-image: url(../Recursos/img/Grid5.JPG);
-    }
-    &-image-6{
-        grid-area: grid-image-6;
-        background-image: url(../Recursos/img/Grid6.JPG);
-    }
     &-form{
         grid-area: grid-form;
         padding: 2vw;
+    }
+}
+
+@for $valor from 1 through 6 {
+    .grid-image-#{$valor}{
+        @include imagepropertys;
+        grid-area: grid-image-#{$valor};
+        background-image: url(../Recursos/img/Grid#{$valor}.JPG);
     }
 }
 
