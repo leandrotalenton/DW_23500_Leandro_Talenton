@@ -100,48 +100,56 @@ header {
     justify-content: space-around; }
 
 .main__emblemas-Aztecs-emblem {
+  z-index: 10;
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../Recursos/img/AztecsLog.png); }
+  background-image: url(../Recursos/img/AztecsLog.png);
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); }
   @media (max-width: 730px) {
     .main__emblemas-Aztecs-emblem {
       width: 13vw;
       height: 13vw; } }
 
 .main__emblemas-Franks-emblem {
+  z-index: 10;
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../Recursos/img/FranksLog.png); }
+  background-image: url(../Recursos/img/FranksLog.png);
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); }
   @media (max-width: 730px) {
     .main__emblemas-Franks-emblem {
       width: 13vw;
       height: 13vw; } }
 
 .main__emblemas-Spanish-emblem {
+  z-index: 10;
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../Recursos/img/SpanishLog.png); }
+  background-image: url(../Recursos/img/SpanishLog.png);
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); }
   @media (max-width: 730px) {
     .main__emblemas-Spanish-emblem {
       width: 13vw;
       height: 13vw; } }
 
 .main__emblemas-Teutons-emblem {
+  z-index: 10;
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../Recursos/img/TeutonsLog.png); }
+  background-image: url(../Recursos/img/TeutonsLog.png);
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); }
   @media (max-width: 730px) {
     .main__emblemas-Teutons-emblem {
       width: 13vw;

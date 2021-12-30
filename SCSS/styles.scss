@@ -139,10 +139,12 @@ $emblems:(
 //each que le da propiedades a cada logo usando el mapa
 @each $civ, $filename in $emblems {
     .main__emblemas-#{$civ}-emblem{
+        z-index: 10;
         width: 100px;
         height: 100px;
         @include imagepropertys;
         background-image: url(../Recursos/img/#{$filename});
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
         @media (max-width: 730px) {
             width: 13vw;
             height: 13vw;
