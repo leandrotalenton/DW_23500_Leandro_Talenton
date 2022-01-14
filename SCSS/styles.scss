@@ -122,8 +122,7 @@ header{
     }
     &__texto{
         padding: 0% 15%;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto 24px auto;
         font-size: map-get($map: $font-sizes, $key: mediano);
         font-weight: 300;
     }
@@ -146,7 +145,7 @@ $emblems:(
 //each que le da propiedades a cada logo usando el mapa
 @each $civ, $filename in $emblems {
     .main__emblemas-#{$civ}-emblem{
-        z-index: 10;
+        z-index: 0.1;
         width: 100px;
         height: 100px;
         @include imagepropertys;

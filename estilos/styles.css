@@ -89,8 +89,7 @@ header {
     font-size: 26px; }
   .main__texto {
     padding: 0% 15%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto 24px auto;
     font-size: 18px;
     font-weight: 300; }
   .main__emblemas {
@@ -100,7 +99,7 @@ header {
     justify-content: space-around; }
 
 .main__emblemas-Aztecs-emblem {
-  z-index: 10;
+  z-index: 0.1;
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
@@ -114,7 +113,7 @@ header {
       height: 13vw; } }
 
 .main__emblemas-Franks-emblem {
-  z-index: 10;
+  z-index: 0.1;
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
@@ -128,7 +127,7 @@ header {
       height: 13vw; } }
 
 .main__emblemas-Spanish-emblem {
-  z-index: 10;
+  z-index: 0.1;
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
@@ -142,7 +141,7 @@ header {
       height: 13vw; } }
 
 .main__emblemas-Teutons-emblem {
-  z-index: 10;
+  z-index: 0.1;
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
