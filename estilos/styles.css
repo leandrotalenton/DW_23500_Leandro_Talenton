@@ -86,7 +86,7 @@ header {
     margin-right: auto;
     margin-left: auto;
     font-weight: 600;
-    font-size: 23px; }
+    font-size: 24px; }
   .main__texto {
     padding: 0% 15%;
     margin: 0 auto 24px auto;
@@ -100,8 +100,8 @@ header {
 
 .main__emblemas-Aztecs-emblem {
   z-index: 0.1;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -114,8 +114,8 @@ header {
 
 .main__emblemas-Franks-emblem {
   z-index: 0.1;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -128,8 +128,8 @@ header {
 
 .main__emblemas-Spanish-emblem {
   z-index: 0.1;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -142,8 +142,8 @@ header {
 
 .main__emblemas-Teutons-emblem {
   z-index: 0.1;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -236,7 +236,7 @@ header {
   .bo__title {
     color: white;
     margin: 5vw 6.5vw 0vw 6.5vw;
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 400; }
   .bo__list {
     color: white;
@@ -299,7 +299,7 @@ header {
   .bo__form-space-subtitulo {
     color: white;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 400; }
   .bo__form-space-tyc {
     padding: 5px;
@@ -352,10 +352,7 @@ header {
   grid-gap: 0.5vw;
   grid-template-columns: repeat(5, 1fr) 5fr;
   grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form"
- "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form"
- "grid-image-3 grid-image-3 grid-image-2 grid-image-2 grid-image-2 grid-form"
- "grid-image-3 grid-image-3 grid-image-4 grid-image-5 grid-image-6 grid-form"; }
+  grid-template-areas: "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form" "grid-image-1 grid-image-1 grid-image-2 grid-image-2 grid-image-2 grid-form" "grid-image-3 grid-image-3 grid-image-2 grid-image-2 grid-image-2 grid-form" "grid-image-3 grid-image-3 grid-image-4 grid-image-5 grid-image-6 grid-form"; }
   @media (max-width: 768px) {
     .grid-container {
       padding: 2vw;
@@ -363,11 +360,7 @@ header {
       grid-gap: 0.5vw;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: 4fr repeat(4, 1fr);
-      grid-template-areas: "grid-form      grid-form       grid-form       grid-form       grid-form"
- "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
- "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2"
- "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2"
- "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"; } }
+      grid-template-areas: "grid-form      grid-form       grid-form       grid-form       grid-form" "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2" "grid-image-1   grid-image-1    grid-image-2    grid-image-2    grid-image-2" "grid-image-3   grid-image-3    grid-image-2    grid-image-2    grid-image-2" "grid-image-3   grid-image-3    grid-image-4    grid-image-5    grid-image-6"; } }
   .grid-container .bo__form {
     width: 100%;
     display: flex;
@@ -462,6 +455,16 @@ header {
   /* justify-content: flex-start; */
   flex-wrap: wrap;
   margin: 15px auto; }
+  @media (max-width: 908px) {
+    .recursos {
+      background-image: url(../Recursos/img/resPannelCompact.JPG);
+      background-size: 465px;
+      width: 465px; } }
+  @media (max-width: 575px) {
+    .recursos {
+      background-image: url(../Recursos/img/resPannelCompact.JPG);
+      background-size: 465px;
+      transform: scale(0.55) translate(-100px, 0px); } }
 
 .recursos li {
   display: flex;

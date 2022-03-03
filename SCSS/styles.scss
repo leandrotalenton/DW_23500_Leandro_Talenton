@@ -4,8 +4,8 @@ $clear-text-color: white;
 
 $font-sizes: (
     "pequenio": 8px,
-    "mediano": 18px,
-    "grande": 26px,
+    "mediano": 15px,
+    "grande": 24px,
     "ajustable": 2vw
 );
 
@@ -146,8 +146,8 @@ $emblems:(
 @each $civ, $filename in $emblems {
     .main__emblemas-#{$civ}-emblem{
         z-index: 0.1;
-        width: 100px;
-        height: 100px;
+        width: 75px;
+        height: 75px;
         @include imagepropertys;
         background-image: url(../Recursos/img/#{$filename});
         filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
@@ -479,6 +479,17 @@ $emblems:(
     /* justify-content: flex-start; */
     flex-wrap: wrap;
     margin: 15px auto;
+    @media (max-width: 908px) {
+        background-image: url(../Recursos/img/resPannelCompact.JPG);
+        background-size: 465px;
+        width: 465px;
+    }
+    @media (max-width: 575px) {
+        background-image: url(../Recursos/img/resPannelCompact.JPG);
+        background-size: 465px;
+        // width: 500px;
+        transform: scale(0.55) translate(-100px, 0px);
+    }
 }
 
 .recursos li{
