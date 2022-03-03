@@ -109,7 +109,7 @@ header{
 /* ____________________ Estilos del Main (Index) ____________________*/
 
 .main{
-    background-image: linear-gradient(to bottom,  rgb(194, 194, 194) 000%, rgba(248, 248, 248, 1) 020%, rgba(248, 248, 248, 1) 080%,  rgb(194, 194, 194) 100%);
+    background-image: linear-gradient(to bottom,  rgb(228, 228, 228) 000%, rgba(248, 248, 248, 1) 020%, rgba(248, 248, 248, 1) 080%,  rgb(228, 228, 228) 100%);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -164,7 +164,7 @@ $emblems:(
     width: 100%;
     height: 200px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,7 +175,7 @@ $emblems:(
         height: 150px;
         background-image: url(../Recursos/img/legs.png);
         @include imagepropertys;
-        transform: translate(0%, 25px) scale(1.1);
+        transform: translate(0%, 25px) scale(0.75);
         &::before{
             content: "";
             position: absolute;
@@ -435,3 +435,109 @@ $emblems:(
         background-image: url(../Recursos/img/Grid#{$valor}.JPG);
     }
 }
+
+/* agrego todo lo que viene del file del curso de JS para la calculadora */
+
+.calculadora{
+    padding: 20px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
+.unidades{
+    width: 100%;
+    display: flex;
+    /* justify-content: flex-start; */
+    flex-wrap: wrap;
+}
+
+.unidades__div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 100px;
+}
+
+.unidades__div-imagen{
+    height: 80px;
+    width: 80px;
+    margin: auto;
+}
+
+.recursos{
+    background-image: url(../Recursos/img/resPannel.JPG);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 850px;
+    width: 850px;
+    height: 60px;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    flex-wrap: wrap;
+    margin: 15px auto;
+}
+
+.recursos li{
+    display: flex;
+    margin: 3px 0px;
+}
+
+.recursos__wood-texto{
+    width: 35px;
+    height: 20px;
+    text-align: right;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 10px;
+    top: 26px;
+}
+.recursos__food-texto{
+    width: 35px;
+    height: 20px;
+    text-align: right;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 76px;
+    top: 26px;
+}
+.recursos__gold-texto{
+    width: 35px;
+    height: 20px;
+    text-align: right;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 142px;
+    top: 26px;
+}
+.recursos__stone-texto{
+    width: 35px;
+    height: 20px;
+    text-align: right;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 207px;
+    top: 26px;
+}
+.recursos__totales-texto{
+    width: 35px;
+    height: 20px;
+    text-align: right;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 274px;
+    top: 26px;
+}
+
+.output__text{
+    padding-top: 20px;
+/*     text-align: left;
+ */}
